@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="zircon"
+          fetch="https://github.com/ZirconiumAosp"
+          revision="refs/heads/q" />
+
+  <!--ZirconiumAosp Repos -->
+  <project name="bionic" path="bionic" remote="zircon" />
+  <project name="bootable_recovery" path="bootable/recovery" remote="zircon" />
+  <project name="build_make" path="build/make" groups="pdk" remote="zircon">
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project name="build_soong" path="build/soong" remote="zircon" groups="pdk,tradefed" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+  <project name="device_qcom_sepolicy" path="device/qcom/sepolicy" remote="zircon" />
+  <project name="frameworks_av" path="frameworks/av" remote="zircon" />
+  <project name="frameworks_native" path="frameworks/native" remote="zircon" />
+  <project name="hardware_libhardware_legacy" path="hardware/libhardware_legacy" remote="zircon" />
+  <project name="hardware_ril" path="hardware/ril" remote="zircon" />
+  <project name="system_bt" path="system/bt" remote="zircon" />
+  <project name="system_core" path="system/core" remote="zircon" />
+  <project name="system_sepolicy" path="system/sepolicy" remote="zircon" />
+  <project name="system_vold" path="system/vold" remote="zircon" />
+  <project name="vendor_zirconium" path="vendor/zirconium" remote="zircon" />
+  <project name="vendor_qcom_opensource_audio" path="vendor/qcom/opensource/audio" remote="zircon" />
+  <project name="vendor_qcom_opensource_data-ipa-cfg-mgr" path="vendor/qcom/opensource/data-ipa-cfg-mgr" remote="zircon" />
+  
+  <!--ZirconiumAosp Ends-->
+</manifest>

@@ -2,8 +2,11 @@
 <manifest>
 
   <remote  name="aosp"
-           fetch=".."
            review="https://android-review.googlesource.com/" />
+
+  <remote name="github"
+          fetch="https://github.com/" />
+
   <default revision="refs/tags/android-10.0.0_r2"
            remote="aosp"
            sync-j="4" />
@@ -767,5 +770,12 @@
   <project path="tools/trebuchet" name="platform/tools/trebuchet" groups="tools,cts,pdk,pdk-cw-fs,pdk-fs" />
 
   <repo-hooks in-project="platform/tools/repohooks" enabled-list="pre-upload" />
+
+  <!-- Remove unused AOSP repos -->
+  <include name="manifests/remove.xml" />
+
+  <!-- ZirconiumAosp Additions -->
+  <include name="manifests/zircon.xml" />
+  <include name="manifests/los.xml" />
 
 </manifest>
