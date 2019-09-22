@@ -63,6 +63,7 @@
   <project name="android_external_ant-wireless_antradio-library" path="external/ant-wireless/antradio-library" remote="lineage" />
   <project name="android_external_exfat" path="external/exfat" remote="lineage" />
   <project name="android_external_libnfc-nxp" path="external/libnfc-nxp" remote="lineage" />
+  <project name="android_external_libjson-c" path="external/libjson-c" remote="lineage" />
 
   <!--Vendor Repos-->
   <project name="android_vendor_codeaurora_telephony" path="vendor/codeaurora/telephony" remote="lineage" />
